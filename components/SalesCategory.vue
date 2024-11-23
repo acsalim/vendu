@@ -1,10 +1,15 @@
 <template>
-  <Graph :data="productsStore.products" type="bar" label="ProductName" value="sold" legend="# of sales" />
+  <Graph :data="category_sales" type="pie" label="_id" value="CategorySales" legend="# of sales" />
   <span class="hidden">
-    {{ productsStore.products }}
+    {{ category_sales }}
   </span>
 </template>
 
 <script lang="ts" setup>
-const productsStore = useProductsStore();
+const category_sales = ref<CategorySale[]>([]);
+
+onMounted(async () => {
+  const res = await fetch('api/analytics/category_sales');
+  category_sales.value = await res.json();
+});
 </script>

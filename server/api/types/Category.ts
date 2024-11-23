@@ -1,0 +1,1 @@
+export type Category = "Electronics" | "Books" | "Sports & Outdoors" | "Home & Kitchen" | "Clothing";

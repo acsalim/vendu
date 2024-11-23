@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import Product from "../models/Product";
+import type { ProductType } from "../types/ProductType";
 
 async function all(req: Request, res: Response) {
   const page = parseInt(req.query.page as string) || 1;
@@ -7,7 +8,7 @@ async function all(req: Request, res: Response) {
   const skip = (page - 1) * limit;
   const rows = await Product.countDocuments();
 
-  const products = await Product.aggregate([
+  const products: ProductType[] = await Product.aggregate([
     {
       $lookup: {
         from: "sales",

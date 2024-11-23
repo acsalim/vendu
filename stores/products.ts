@@ -1,6 +1,6 @@
 export const useProductsStore = defineStore('products', {
   state: () => ({
-    products: [] as any[],
+    products: [] as ProductType[],
     pagination: {
       page: 1,
       limit: 5,

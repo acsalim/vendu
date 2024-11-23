@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 
 const app = express();
 
-
 mongoose.connect(useRuntimeConfig().DATABASE_URL)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));

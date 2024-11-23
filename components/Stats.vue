@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-const top5Products = ref<any[]>([]);
+const top5Products = ref<ProductType[]>([]);
 
 async function fetchProducts() {
   const res = await fetch(`/api/analytics/trending_products?limit=5`);

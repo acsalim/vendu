@@ -15,7 +15,7 @@ const props = defineProps<{
 }>();
 
 const canvasEl = ref<HTMLCanvasElement | null>(null);
-let chartInstance: any = null;
+let chartInstance: Chart | null = null;
 
 const createChart = () => {
   if (chartInstance) {
@@ -31,7 +31,7 @@ const createChart = () => {
         hoverOffset: 4
       }]
     },
-    options: {...props.options}
+    options: { ...props.options }
   });
 };
 

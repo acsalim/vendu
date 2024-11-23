@@ -1,6 +1,7 @@
 import type { Request, Response } from "express";
 import Sale from "../models/Sale";
 import Product from "../models/Product";
+import type { CategorySale } from "../types/CategorySale";
 
 async function TotalSales(req: Request, res: Response) {
 
@@ -87,7 +88,7 @@ async function TrendingProducts(req: Request, res: Response) {
 }
 
 async function CategorySales(req: Request, res: Response) {
-  const sales = await Product.aggregate([
+  const sales: CategorySale[] = await Product.aggregate([
     {
       $lookup: {
         from: "sales",

@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     DATABASE_URL: "mongodb+srv://avselom:LINqRZAx7JLcLjM5@cluster0.agyka.mongodb.net/vendu"
   },
   imports: {
+    dirs: ['types'],
     presets: [
       {
         from: 'chart.js/auto',
@@ -30,7 +31,7 @@ export default defineNuxtConfig({
       },
       {
         from: 'date-fns',
-        imports: ['format', 'subDays','subWeeks', 'subMonths', 'subQuarters', 'subYears', 'startOfWeek', 'startOfMonth', 'startOfQuarter', 'startOfYear', 'endOfWeek', 'endOfMonth', 'endOfQuarter', 'endOfYear']
+        imports: ['format', 'subDays', 'subWeeks', 'subMonths', 'subQuarters', 'subYears', 'startOfWeek', 'startOfMonth', 'startOfQuarter', 'startOfYear', 'endOfWeek', 'endOfMonth', 'endOfQuarter', 'endOfYear']
       }
     ]
   }
