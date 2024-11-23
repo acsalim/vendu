@@ -1,13 +1,9 @@
 import express from "express";
 import router from "./routes";
-import mongoose from "mongoose";
+import DB from "./models";
 
 const app = express();
-
-mongoose.connect(useRuntimeConfig().DATABASE_URL)
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('MongoDB connection error:', err));
-
+DB.connect();
 app.use(express.json());
 app.use('/', router);
 app.use((req, res) => {

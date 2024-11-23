@@ -1,13 +1,12 @@
 import type { Request, Response } from "express";
-import Sale from "../models/Sale";
-import Product from "../models/Product";
 import type { CategorySale } from "../types/CategorySale";
+import DB from "../models";
 
 async function TotalSales(req: Request, res: Response) {
 
   const [start, end] = (req.query.period as string).split(',').map((date: string) => new Date(date));
 
-  const data = await Sale.aggregate([
+  const data = await DB.Sale.aggregate([
     {
       $match: {
         Date: { $gte: start, $lte: end }
@@ -49,7 +48,7 @@ async function TotalSales(req: Request, res: Response) {
 
 async function TrendingProducts(req: Request, res: Response) {
 
-  const products = await Product.aggregate([
+  const products = await DB.Product.aggregate([
     {
       $lookup: {
         from: "sales",
@@ -88,7 +87,7 @@ async function TrendingProducts(req: Request, res: Response) {
 }
 
 async function CategorySales(req: Request, res: Response) {
-  const sales: CategorySale[] = await Product.aggregate([
+  const sales: CategorySale[] = await DB.Product.aggregate([
     {
       $lookup: {
         from: "sales",

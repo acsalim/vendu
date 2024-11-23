@@ -1,14 +1,14 @@
 import type { Request, Response } from "express";
-import Product from "../models/Product";
 import type { ProductType } from "../types/ProductType";
+import DB from "../models";
 
 async function all(req: Request, res: Response) {
   const page = parseInt(req.query.page as string) || 1;
   const limit = parseInt(req.query.limit as string) || 5;
   const skip = (page - 1) * limit;
-  const rows = await Product.countDocuments();
+  const rows = await DB.Product.countDocuments();
 
-  const products: ProductType[] = await Product.aggregate([
+  const products: ProductType[] = await DB.Product.aggregate([
     {
       $lookup: {
         from: "sales",

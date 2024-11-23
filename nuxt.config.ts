@@ -20,8 +20,9 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {
-    DATABASE_URL: "mongodb+srv://avselom:LINqRZAx7JLcLjM5@cluster0.agyka.mongodb.net/vendu"
+    //DATABASE_URL: "mongodb+srv://avselom:LINqRZAx7JLcLjM5@cluster0.agyka.mongodb.net/vendu"
   },
+  ignore: ['server/api/seeders'],
   imports: {
     dirs: ['types'],
     presets: [
