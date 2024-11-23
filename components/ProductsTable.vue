@@ -9,7 +9,7 @@
       </button>
       <div class="join-item flex items-center gap-2 order-1 lg:order-none">
         <span>Page:</span>
-        <input v-model="productsStore.pagination.page" type="number" min="1" :max="productsStore.pagesCount" class="input input-sm !w-fit" />
+        <input v-model="productsStore.pagination.page" type="number" min="1" :max="productsStore.pagesCount" class="input input-sm input-primary !w-fit" />
         <span>of</span>
         <span>{{ productsStore.pagesCount }}</span>
       </div>

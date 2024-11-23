@@ -11,7 +11,7 @@ const props = defineProps<{
   label: string,
   value: string,
   legend?: string,
-  options: any
+  options?: any
 }>();
 
 const canvasEl = ref<HTMLCanvasElement | null>(null);
@@ -31,7 +31,7 @@ const createChart = () => {
         hoverOffset: 4
       }]
     },
-    options: props.options
+    options: {...props.options}
   });
 };
 

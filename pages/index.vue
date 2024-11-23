@@ -1,4 +1,5 @@
 <template>
+  <Menu />
   <Dashboard />
 </template>
 

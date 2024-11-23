@@ -1,8 +1,8 @@
 <template>
   <div class="p-10">
-    <div class="mx-auto w-fit">
-      <h1>Trending products</h1>
+    <div class="flex justify-evenly flex-wrap">
       <Stats />
+      <TotalSales />
     </div>
     <h1 class="text-center">Statistics</h1>
     <div class="flex items-stretch justify-center flex-wrap gap-4">

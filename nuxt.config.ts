@@ -30,16 +30,8 @@ export default defineNuxtConfig({
       },
       {
         from: 'date-fns',
-        imports: ['format', 'subWeeks', 'subMonths', 'subQuarters', 'subYears', 'startOfWeek', 'startOfMonth', 'startOfQuarter', 'startOfYear', 'endOfWeek', 'endOfMonth', 'endOfQuarter', 'endOfYear']
-      },
-      // {
-      //   from: 'vue-chartjs',
-      //   imports: ['Bar', 'Pie']
-      // },
-      // {
-      //   from: 'chart.js',
-      //   imports: [['Chart', 'ChartJS'], 'Title', 'Tooltip', 'Legend', 'BarElement', 'CategoryScale', 'LinearScale','ArcElement']
-      // }
+        imports: ['format', 'subDays','subWeeks', 'subMonths', 'subQuarters', 'subYears', 'startOfWeek', 'startOfMonth', 'startOfQuarter', 'startOfYear', 'endOfWeek', 'endOfMonth', 'endOfQuarter', 'endOfYear']
+      }
     ]
   }
 });
