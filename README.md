@@ -1,75 +1,46 @@
-# Nuxt Minimal Starter
+# 🚀 Vendu: Your Ultimate Sales Dashboard (Nuxt 3 + Vue 3)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to **Vendu**, your one-stop solution for tracking and analyzing sales data with a sleek and modern dashboard.
 
-## Setup
+## 📊 Dashboard Features:
+- **Trending Products:**
+  - 🔥 Top 5 best-selling products, sorted by quantity.
+- **Total Sales by Period:**
+  - 📈 Total sales amount for a selected period.
+- **Statistics:**
+  - 🥧 **Pie Chart:**
+    - Sales distribution by category.
+  - 📊 **Histogram:**
+    - Sales by product.
 
-Make sure to install dependencies:
+# 🛠️ Backend (Express.js)
+- **GET /api/analytics/total_sales:**
+  - 💰 Returns the total sales amount for the selected period.
+- **GET /api/analytics/trending_products:**
+  - 📈 Returns a list of the top 3 best-selling products, including their name, quantity sold, and total sales amount for each.
+- **GET /api/analytics/category_sales:**
+  - 📊 Returns the sales distribution by category, including the number of sales and the percentage.
+- **GET /api/products:**
+  - 🛒 Returns a table of products with the number of sales for each product.
 
-```bash
-# npm
-npm install
+# 🗄️ Database (MongoDB)
+- The project uses **MongoDB** as the database.
+- A test database is already created and linked.
+- If you want to add a local database, go to `env.json` and link it.
 
-# pnpm
-pnpm install
+# 🛠️ Commands
 
-# yarn
-yarn install
+- `bun i` to install dependencies
+- `bun dev` to launch the client and server simultaneously 🚀
+- `bun build` to build the project
+- `bun preview` to preview the built project
+- `bun seed` to seed the database in case you linked a local MongoDB
 
-# bun
-bun install
-```
+> **Note:** You can test major functions at [vendu55.vercel.app](https://vendu55.vercel.app).
+⚠️ **Important Note:**
+- This application utilizes mock data solely for demonstration purposes. 
+- It highlights the core functionalities of a sales management platform while omitting certain advanced features to ensure simplicity and focus.
+---
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Made with ❤️ by Abdessalam Chakiri.  
+Contact me at avselom@gmail.com or visit my website [avselom.me](https://avselom.me).
