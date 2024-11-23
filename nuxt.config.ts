@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     }
   ],
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@pinia/nuxt'],
   nitro: {
     storage: {
       data: {
@@ -21,5 +21,25 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     DATABASE_URL: "mongodb+srv://avselom:LINqRZAx7JLcLjM5@cluster0.agyka.mongodb.net/vendu"
+  },
+  imports: {
+    presets: [
+      {
+        from: 'chart.js/auto',
+        imports: ['Chart']
+      },
+      {
+        from: 'date-fns',
+        imports: ['format', 'subWeeks', 'subMonths', 'subQuarters', 'subYears', 'startOfWeek', 'startOfMonth', 'startOfQuarter', 'startOfYear', 'endOfWeek', 'endOfMonth', 'endOfQuarter', 'endOfYear']
+      },
+      // {
+      //   from: 'vue-chartjs',
+      //   imports: ['Bar', 'Pie']
+      // },
+      // {
+      //   from: 'chart.js',
+      //   imports: [['Chart', 'ChartJS'], 'Title', 'Tooltip', 'Legend', 'BarElement', 'CategoryScale', 'LinearScale','ArcElement']
+      // }
+    ]
   }
 });
