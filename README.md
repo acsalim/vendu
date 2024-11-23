@@ -1,8 +1,8 @@
-# 🚀 Vendu: Your Ultimate Sales Dashboard (Nuxt 3 + Vue 3)
+# 🚀 Vendu: Your Ultimate Sales Dashboard
 
 Welcome to **Vendu**, your one-stop solution for tracking and analyzing sales data with a sleek and modern dashboard.
 
-## 📊 Dashboard Features:
+## 📊 Frontend Dashboard (Nuxt 3 + Vue 3):
 - **Trending Products:**
   - 🔥 Top 5 best-selling products, sorted by quantity.
 - **Total Sales by Period:**
@@ -36,8 +36,8 @@ Welcome to **Vendu**, your one-stop solution for tracking and analyzing sales da
 - `bun preview` to preview the built project
 - `bun seed` to seed the database in case you linked a local MongoDB
 
-> **Note:** You can test major functions at [vendu55.vercel.app](https://vendu55.vercel.app).
-⚠️ **Important Note:**
+> **⚠️ Note:** 
+- You can test major functions at [vendu55.vercel.app](https://vendu55.vercel.app).
 - This application utilizes mock data solely for demonstration purposes. 
 - It highlights the core functionalities of a sales management platform while omitting certain advanced features to ensure simplicity and focus.
 ---
